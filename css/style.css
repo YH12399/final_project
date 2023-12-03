@@ -159,7 +159,9 @@ body{
     /* background: rgb(134,255,93);
     background: linear-gradient(12deg, rgba(134,255,93,1) 0%, rgba(112,199,255,1) 45%, rgba(112,199,255,1) 55%, rgba(134,255,93,1) 100%); */
     background-image: url("../images/Depositphotos_265149188_XL.jpg");
-    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 nav ul li{
@@ -244,17 +246,38 @@ img{
     height: 90%;
 }
 
+.gallery_container img{
+    height: 70vh;
+}
+
+.gallery_container{
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background-color: rgba(168, 204, 215, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+    height: 90vh;
+
+    transition:all 1s ease-in-out;
+    position: absolute;
+    bottom: -100%;
+}
+
+.gallery_container.open{
+    bottom: 0;
+}
 
 @supports not (backdrop-filter: blur(10px)) {
-    
-
     .pet_primary {
         background: rgba(255, 255, 255, 0.8); /* Less transparent background as a fallback */
         /* ... other alternative styles ... */
     }
 }
 
-
+/* Final Project pause here */
 
 @media screen and (prefers-reduced-motion: reduce){
     html{
@@ -379,6 +402,7 @@ div{
     box-shadow: 0.5em 0.5em 1.5em gray;
 }
 
+/* for final project */
 @media screen and (min-width: 1200px){
     .container{
         grid-auto-rows: 60vh;
