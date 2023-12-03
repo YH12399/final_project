@@ -38,10 +38,6 @@ nav a{
     text-align: center;
 }
 
-nav a:focus, nav a:hover {
-    text-decoration: wavy;
-}
-
 nav .active{
     font-weight: bold;
     text-decoration: underline;
@@ -92,7 +88,7 @@ p{
 
 /* Begin styling for index.html */
 
-.first_pet, .second_pet, .third_pet, .fourth_pet, .fifth_pet{
+/* .first_pet, .second_pet, .third_pet, .fourth_pet, .fifth_pet{
     grid-column: 1 / span 2;
     margin-left: 2em;
 }
@@ -126,7 +122,7 @@ p{
     margin-left: 2em;
     margin-top: 1em;
     margin-bottom: 0em;
-}
+} */
 
 /* Begin styling for travel.html */
 
@@ -198,6 +194,10 @@ nav ul li:hover, nav ul li:focus {
     }
 }
 
+nav ul li:focus{
+    border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
 nav .active{
     font-weight: bold;
     text-decoration: underline;
@@ -246,31 +246,96 @@ img{
     height: 90%;
 }
 
-.gallery_container img{
-    height: 70vh;
+.in_display_image{
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.preview_images{
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview_images img{
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .gallery_container{
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: rgba(168, 204, 215, 0.5);
     backdrop-filter: blur(20px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    overflow: scroll;
-    height: 90vh;
-    
-
-    transition:all 2s ease-in-out;
-    position: absolute;
-    bottom: 0%;
-    overscroll-behavior: contain;
+    height: 90%;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+    overscroll-behavior: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-/* .gallery_container.open{
-    bottom: 0;
-} */
+.close_button{
+    background: rgba(168, 204, 215, 0.4);
+    box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    height: 2em;
+    width: 5em;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.close_button::before{
+    content: "";
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0%;
+    left: -125%;
+    transform: skew(45deg);
+    transition: left 0.5s ease-in-out;
+}
+
+.close_button:hover, .close_button:focus {
+    transform: scale(1.02);
+    &::before{
+        left: 150%;
+    }
+}
+
+.close_button:focus{
+    border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
 
 @supports not (backdrop-filter: blur(10px)) {
     .pet_primary {

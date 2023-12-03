@@ -24,7 +24,7 @@
     <main id="main">
         <div class="container">
             <!-- For final Project -->
-            <div class="pet_primary odd" onclick="clickFunction('first_pet')" tabindex="0">
+            <div class="pet_primary odd" onclick="clickFunction('first_pet')" onkeydown="if(event.key === 'Enter' || event.key === ' ') clickFunction('first_pet');" tabindex="0">
                 <h2>Pluto</h2>
                 <img src="images/pets/pluto/pluto.jpg" alt="White dog looking up">
             </div>
@@ -68,15 +68,13 @@
 
             <div class="overlay first_pet">
                 <!-- <div class="gallery_container first_pet">
-                    <button class="close_button" onclick="closeFunction()">Close</button>
-                    <div class="in_display_image">
-                        <div class="flip_button"></div>
-                    </div>
+                    <button class="close_button" type="button" onclick="closeFunction()">Close</button>
+                    <div class="in_display_image"></div>
                     <div class="preview_images">
-                        <img src="images/pets/pluto/pluto_cookie.jpg" alt="Pluto the dog standing up to eat a cookie">
-                        <img src="images/pets/pluto/pluto_sleeping.jpg" alt="Pluto sleeping on bed">
-                        <img src="images/pets/pluto/pluto_sitting.jpg" alt="Pluto sitting and posed on top of a table">
-                        <img src="images/pets/pluto/pluto_walk.jpg" alt="Pluto the dog on a walking trail">
+                        <img src="images/pets/pluto/pluto_cookie.jpg" alt="Pluto the dog standing up to eat a cookie" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">
+                        <img src="images/pets/pluto/pluto_sleeping.jpg" alt="Pluto sleeping on bed" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">
+                        <img src="images/pets/pluto/pluto_sitting.jpg" alt="Pluto sitting and posed on top of a table" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">
+                        <img src="images/pets/pluto/pluto_walk.jpg" alt="Pluto the dog on a walking trail" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">
                     </div>
                 </div> -->
             </div>
@@ -111,10 +109,10 @@
                 <img src="images/pets/rocket/rocket_dinner.jpg" width="200" alt="Rocket is eating his dinner.">
                 <img src="images/pets/rocket/rocket_wants_to_go_out.jpg" width="200" alt="Rocket wants to come out of the playpen">
                 <img src="images/pets/rocket/rocket_childhood.jpg" width="200" alt="Rocket is in his childhood.">
-                <video width="200" controls>
+                <!-- <video width="200" controls>
                     <source src="videos/pets/rocket_kitchen_clip.mp4">
                     Your browser does not support the video tag. This video is about Rocket is trying to hunt the kitchen clip.
-                </video>
+                </video> -->
             </div>
 
                 
