@@ -5,7 +5,7 @@ function clickFunction(){
 function clickFunction(index){
     overlayBackground(index);
     document.body.style.overflow = "hidden";
-    disableMainPageInteraction()
+    disableMainPageInteraction();
 }
 
 function overlayBackground(index){
