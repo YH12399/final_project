@@ -258,17 +258,19 @@ img{
     backdrop-filter: blur(20px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    overflow: hidden;
+    overflow: scroll;
     height: 90vh;
+    
 
-    transition:all 1s ease-in-out;
+    transition:all 2s ease-in-out;
     position: absolute;
-    bottom: -100%;
+    bottom: 0%;
+    overscroll-behavior: contain;
 }
 
-.gallery_container.open{
+/* .gallery_container.open{
     bottom: 0;
-}
+} */
 
 @supports not (backdrop-filter: blur(10px)) {
     .pet_primary {
