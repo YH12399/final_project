@@ -113,13 +113,25 @@ p{
 }
 
 /* for final project */
+
 body{
-    /* background: rgb(134,255,93);
-    background: linear-gradient(12deg, rgba(134,255,93,1) 0%, rgba(112,199,255,1) 45%, rgba(112,199,255,1) 55%, rgba(134,255,93,1) 100%); */
-    background-image: url("../images/Depositphotos_265149188_XL.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+}
+#index_body{
+    background-image: url("../images/Depositphotos_265149188_XL.jpg");
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; */
+}
+
+#travel_body{
+    background-image: url("../images/travel_background.png");
+}
+
+#travel_body h1{
+    color: black;
 }
 
 nav ul li{
