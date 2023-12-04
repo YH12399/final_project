@@ -91,10 +91,6 @@ var third_recipe_image_ar = ['third_recipe',
 
 var recipe_image_ar = [first_recipe_image_ar, second_recipe_image_ar, third_recipe_image_ar];
 
-function clickFunction(){
-    console.log('clicked');
-}
-
 function clickFunction(index){
     overlayBackground(index);
     document.body.style.overflow = "hidden";
@@ -144,7 +140,7 @@ function create_preview_image_string(index){
     var suffix = ' onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">';
     var image_ar = '';
 
-    console.log(source_ar);
+    // console.log(source_ar);
 
     for (var i = 0; i < source_ar.length; i++){
         if (source_ar[i][0] === index){
@@ -157,7 +153,7 @@ function create_preview_image_string(index){
         preview_image_string += image_ar[i] + suffix;
     }
 
-    console.log(preview_image_string);
+    // console.log(preview_image_string);
 
     return preview_image_string;
 }
@@ -170,7 +166,7 @@ function create_gallery_string(index){
 async function draw_gallery(index){
     var query = ".overlay";
     var target = document.querySelector(query);
-    console.log(target);
+    // console.log(target);
     await insert_html_to_gallery(index, target);
     displayImage(document.querySelector(".preview_images img"));
 }
@@ -199,7 +195,7 @@ function enableMainPageInteraction() {
 }
 
 function displayImage(image){
-    console.log(image);
+    // console.log(image);
     document.querySelector(".in_display_image").innerHTML = image.outerHTML;
 }
 
