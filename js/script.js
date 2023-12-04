@@ -57,7 +57,13 @@ var fourth_travel_image_ar = ['fourth_travel',
 '<img src="images/travel/hangzhou/alibaba.jpeg" alt="A sign of the company Alibaba"',
 '<img src="images/travel/hangzhou/westlake.jpg" alt="People on a ancient Chinese style bridge on the West Lake"'];
 
-var travel_image_ar = [first_travel_image_ar, second_travel_image_ar, third_travel_image_ar, fourth_travel_image_ar];
+var fifth_travel_image_ar = ['fifth_travel',
+'<img src="images/travel/boston/boston_main.jpg" alt="A view of the Boston skyline across the Charles River"',
+'<img src="images/travel/boston/boston_common.jpg" alt="A daytime view of Boston common with many building in the background"',
+'<img src="images/travel/boston/charles_river.jpg" alt="A night view of Boston\'s skyline on the Charles River"',
+'<img src="images/travel/boston/harvard.jpg" alt="A view of a building Harvard University"'];
+
+var travel_image_ar = [first_travel_image_ar, second_travel_image_ar, third_travel_image_ar, fourth_travel_image_ar, fifth_travel_image_ar];
 
 function clickFunction(){
     console.log('clicked');
