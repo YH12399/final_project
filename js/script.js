@@ -44,7 +44,14 @@ var second_travel_image_ar = ['second_travel',
 '<img src="images/travel/monteverde/monteverde_hanging_bridges.jpeg" alt="An image of a bridge hanging above the cloud forest canopy in Monteverde."',
 '<img src="images/travel/monteverde/monteverde_hummingbirds.jpeg" alt="A hummingbird with green feathers drinking from a pink and orange flower."'];
 
-var travel_image_ar = [first_travel_image_ar, second_travel_image_ar];
+var third_travel_image_ar = ['third_travel',
+'<img src="images/travel/nyc/nyc_empire_state.jpeg" alt="A night view of the Empire Building with the downtown of Manhattan as the background"',
+'<img src="images/travel/nyc/time_square.jpg" alt="People walking on the cross walk near the Time Square, with cars and building in the background"',
+'<img src="images/travel/nyc/yellow_cab.jpg" alt="A yellow cab on a bridge"',
+'<img src="images/travel/nyc/brooklyn_bridge.jpg" alt="A view of the Brooklyn Bridge on the bridge"',
+'<img src="images/travel/nyc/bibble-sip.jpg" alt="Lots of cake in a bakery store with the logo of bibble &amp; sip in front."'];
+
+var travel_image_ar = [first_travel_image_ar, second_travel_image_ar, third_travel_image_ar];
 
 function clickFunction(){
     console.log('clicked');
