@@ -465,7 +465,7 @@ div{
         grid-column: 3 / span 2;
     }
 
-    .pet_primary:hover, .pet_primary:focus{
+    .pet_primary:hover, .pet_primary:focus, .travel_primary:hover, .travel_primary:focus{
         transform: scale(1.05);
     }
 
