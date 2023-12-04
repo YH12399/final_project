@@ -83,7 +83,13 @@ var second_recipe_image_ar = ['second_recipe',
 '<img src="images/recipes/chicken_curry/raw_chicken_breast.jpeg" alt="A plate of raw chicken breast"',
 '<img src="images/recipes/chicken_curry/rice.jpeg" alt="A bowl of white rice"'];
 
-var recipe_image_ar = [first_recipe_image_ar, second_recipe_image_ar];
+var third_recipe_image_ar = ['third_recipe',
+'<img src="images/recipes/coca-cola_chicken_wings/coca_cola_chicken_wings.jpg" alt="A plate of Coca-Cola Chicken Wings"',
+'<img src="images/recipes/coca-cola_chicken_wings/boils_in_coke.jpg" alt="5 chicken wings boil in coke in a fry pan"',
+'<img src="images/recipes/coca-cola_chicken_wings/chicken-wings_and_rice_cake.jpg" alt="A bowl of rice covered by Coca-Cola Chicken Wings"',
+'<img src="images/recipes/coca-cola_chicken_wings/chicken_wings_chopsticks.jpg" alt="A pair of chopsticks holding a Coca-Cola Chicken wing"'];
+
+var recipe_image_ar = [first_recipe_image_ar, second_recipe_image_ar, third_recipe_image_ar];
 
 function clickFunction(){
     console.log('clicked');

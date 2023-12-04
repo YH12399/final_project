@@ -504,6 +504,15 @@ img{
     .recipe_primary_text_screen{
         grid-column: 3 / span 2;
         overflow: auto;
+        justify-content: flex-start;
+    }
+
+    .recipe_primary_text_screen p{
+        margin: 2%;
+    }
+
+    .recipe_primary_text_screen li{
+        text-align: left;
     }
 
     .travel_primary_gallery_screen{
