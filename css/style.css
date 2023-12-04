@@ -413,32 +413,36 @@ img{
      }
 
      nav ul li::before{
-        content: '';
+        transition: none;
      }
 
      nav ul li:hover, nav ul li:focus{
+        border: 3px solid rgba(255, 255, 255, 0.85);
         &::before{
-            content: '';
+            left: -125%;
+            transition: none;
         }
      }
 
-     .pet_primary.odd::before, .pet_primary.even::before, .pet_primary.last::before{
-        content: '';
+     .pet_primary.odd::before, .pet_primary.even::before, .pet_primary.last::before, .travel_primary::before, .recipe_primary_gallery::before, .travel_primary_gallery_screen::before{
+        transition: none;
      }
 
-     .pet_primary:hover, .pet_primary:focus{
+     .pet_primary:hover, .pet_primary:focus, .travel_primary:hover, .travel_primary:focus, .recipe_primary_gallery:hover, .recipe_primary_gallery:focus, .travel_primary_gallery_screen:hover, .travel_primary_gallery_screen:focus{
         &::before{
-            content: '';
+            left: -125%;
+            transition: none;
         }
      }
 
      .close_button::before{
-        content: '';
+        transition: none;
      }
 
      .close_button:hover, .close_button:focus{
         &::before{
-            content: '';
+            left: -125%;
+            transition: none;
         }
      }
 }
