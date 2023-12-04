@@ -29,9 +29,16 @@ var fifth_pet_image_ar = ['fifth_pet',
 
 var pets_image_nest_ar = [first_pet_image_ar, second_pet_image_ar, third_pet_image_ar, fourth_pet_image_ar, fifth_pet_image_ar];
 
-// var first_pet_image = '<img src="images/pets/pluto/pluto_cookie.jpg" alt="Pluto the dog standing up to eat a cookie" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0"><img src="images/pets/pluto/pluto_sleeping.jpg" alt="Pluto sleeping on bed" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0"><img src="images/pets/pluto/pluto_sitting.jpg" alt="Pluto sitting and posed on top of a table" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0"><img src="images/pets/pluto/pluto_walk.jpg" alt="Pluto the dog on a walking trail" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">';
+var first_travel_image_ar = ['first_travel',
+                                '<img src="images/travel/chiangmai/chiangmai1.jpeg" alt="Colorful hot balloons in the heart of Chiang Mai"',
+                                '<img src="images/travel/chiangmai/chiangmai2.jpeg" alt="Several elephants and smiley volunteers in the forest"',
+                                '<img src="images/travel/chiangmai/chiangmai3.jpeg" alt="ancient temple of Chiang Mai"',
+                                '<img src="images/travel/chiangmai/chiangmai4.jpeg" alt="several monks walk by the street"',
+                                '<img src="images/travel/chiangmai/chiangmai5.jpeg" alt="several delicious dishes from Chiang Mai"',
+                                '<img src="images/travel/chiangmai/chiangmaigif.gif" class="motion_gif" alt="A full sky of Sky Lantern rising up"',
+                                '<img src="images/travel/chiangmai/chiangmaigif_static.jpeg" class="static_gif" alt="A full sky of Sky Lantern rising up"'];
 
-// var first_pet_gallery = '<div class="gallery_container first_pet"><button class="close_button" type="button" onclick="closeFunction()">Close</button><div class="in_display_image"></div><div class="preview_images">' + first_pet_image + '</div></div>';
+var travel_image_ar = [first_travel_image_ar];
 
 function clickFunction(){
     console.log('clicked');
@@ -70,14 +77,27 @@ function closeFunction(){
     enableMainPageInteraction()
 }
 
+function get_image_nest_list(index){
+    if(index.search("pet") != -1){
+        return pets_image_nest_ar;
+    }else if(index.search("travel") != -1){
+        return travel_image_ar;
+    }else if(index.search("recipe") != -1){
+        return recipes_image_ar;
+    }
+}
+
 function create_preview_image_string(index){
+    var source_ar = get_image_nest_list(index);
     var preview_image_string = '';
     var suffix = ' onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">';
     var image_ar = '';
 
-    for (var i = 0; i < pets_image_nest_ar.length; i++){
-        if (pets_image_nest_ar[i][0] === index){
-            image_ar = pets_image_nest_ar[i];
+    console.log(source_ar);
+
+    for (var i = 0; i < source_ar.length; i++){
+        if (source_ar[i][0] === index){
+            image_ar = source_ar[i];
             break;
         }
     }
@@ -92,7 +112,7 @@ function create_preview_image_string(index){
 }
 
 function create_gallery_string(index){
-    var gallery_string = '<div class="gallery_container first_pet"><button class="close_button" type="button" onclick="closeFunction()">Close</button><div class="in_display_image"></div><div class="preview_images">' + create_preview_image_string(index) + '</div></div>';
+    var gallery_string = '<div class="gallery_container"><button class="close_button" type="button" onclick="closeFunction()">Close</button><div class="in_display_image"></div><div class="preview_images">' + create_preview_image_string(index) + '</div></div>';
     return gallery_string;
 }
 
