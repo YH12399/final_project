@@ -51,7 +51,13 @@ var third_travel_image_ar = ['third_travel',
 '<img src="images/travel/nyc/brooklyn_bridge.jpg" alt="A view of the Brooklyn Bridge on the bridge"',
 '<img src="images/travel/nyc/bibble-sip.jpg" alt="Lots of cake in a bakery store with the logo of bibble &amp; sip in front."'];
 
-var travel_image_ar = [first_travel_image_ar, second_travel_image_ar, third_travel_image_ar];
+var fourth_travel_image_ar = ['fourth_travel',
+'<img src="images/travel/hangzhou/hangzhou_main.jpg" alt="A pagodas on a hill near a lake"',
+'<img src="images/travel/hangzhou/lingyin.jpg" alt="An ancient Chinese style street with stairs going uphill, with many ancient Chinese style buildings on both sides"',
+'<img src="images/travel/hangzhou/alibaba.jpeg" alt="A sign of the company Alibaba"',
+'<img src="images/travel/hangzhou/westlake.jpg" alt="People on a ancient Chinese style bridge on the West Lake"'];
+
+var travel_image_ar = [first_travel_image_ar, second_travel_image_ar, third_travel_image_ar, fourth_travel_image_ar];
 
 function clickFunction(){
     console.log('clicked');
