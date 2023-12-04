@@ -1,15 +1,33 @@
 var first_pet_image_ar = ['first_pet',
-                            '<img src="images/pets/pluto/pluto_cookie.jpg" alt="Pluto the dog standing up to eat a cookie" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">',
-                            '<img src="images/pets/pluto/pluto_sleeping.jpg" alt="Pluto sleeping on bed" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">',
-                            '<img src="images/pets/pluto/pluto_sitting.jpg" alt="Pluto sitting and posed on top of a table" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">',
-                            '<img src="images/pets/pluto/pluto_walk.jpg" alt="Pluto the dog on a walking trail" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">'];
+                            '<img src="images/pets/pluto/pluto_cookie.jpg" alt="Pluto the dog standing up to eat a cookie"',
+                            '<img src="images/pets/pluto/pluto_sleeping.jpg" alt="Pluto sleeping on bed"',
+                            '<img src="images/pets/pluto/pluto_sitting.jpg" alt="Pluto sitting and posed on top of a table"',
+                            '<img src="images/pets/pluto/pluto_walk.jpg" alt="Pluto the dog on a walking trail" onclick="displayImage(this)"'];
 
 var second_pet_image_ar = ['second_pet',
-                            '<img src="images/pets/rocket/rocket_dinner.jpg" alt="Rocket is eating his dinner.">',
-                            '<img src="images/pets/rocket/rocket_wants_to_go_out.jpg" alt="Rocket wants to come out of the playpen">',
-                            '<img src="images/pets/rocket/rocket_childhood.jpg" alt="Rocket is in his childhood.">'];
+                            '<img src="images/pets/rocket/rocket_dinner.jpg" alt="Rocket is eating his dinner."',
+                            '<img src="images/pets/rocket/rocket_wants_to_go_out.jpg" alt="Rocket wants to come out of the playpen"',
+                            '<img src="images/pets/rocket/rocket_childhood.jpg" alt="Rocket is in his childhood."'];
 
-var pets_image_nest_ar = [first_pet_image_ar, second_pet_image_ar];
+var third_pet_image_ar = ['third_pet',
+                            '<img src="images/pets/juno/juno_pup.JPG" alt="A young black and brown dog with his tongue hanging out"',
+                            '<img src="images/pets/juno/juno_laying.JPG" alt="A black and brown dog laying on a rug"',
+                            '<img src="images/pets/juno/juno_laying_2.JPG" alt="A black and brown dog laying on a wood floor"',
+                            '<img src="images/pets/juno/juno_profile.JPG" alt="A profile perspective of a black and brown dog from shoulders up"'];
+
+var fourth_pet_image_ar = ['fourth_pet',
+                            '<img src="images/pets/lulu/lulu-eating-1.JPG" alt="Lulu enjoying a pepper"',
+                            '<img src="images/pets/lulu/lulu-sleeping-1.jpg" alt="Lulu sleeping in a green house"',
+                            '<img src="images/pets/lulu/lulu-sleeping-2.jpg" alt="Lulu sleeping in a gray house"',
+                            '<img src="images/pets/lulu/lulu-2.jpg" alt="Lulu sniffing the camera"'];
+
+var fifth_pet_image_ar = ['fifth_pet',
+                            '<img src="images/pets/peddie/peddie_play.jpg" alt="Peddie is playing in the snow."',
+                            '<img src="images/pets/peddie/peddie_swim.jpg" alt="Peddie is swimming in a lake."',
+                            '<img src="images/pets/peddie/peddie_sleep.jpg" alt="Peddie loves sleeping on the couch."',
+                            '<img src="images/pets/peddie/peddie_smile.jpg" alt="Peddie has the sweetest in the world."'];
+
+var pets_image_nest_ar = [first_pet_image_ar, second_pet_image_ar, third_pet_image_ar, fourth_pet_image_ar, fifth_pet_image_ar];
 
 // var first_pet_image = '<img src="images/pets/pluto/pluto_cookie.jpg" alt="Pluto the dog standing up to eat a cookie" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0"><img src="images/pets/pluto/pluto_sleeping.jpg" alt="Pluto sleeping on bed" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0"><img src="images/pets/pluto/pluto_sitting.jpg" alt="Pluto sitting and posed on top of a table" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0"><img src="images/pets/pluto/pluto_walk.jpg" alt="Pluto the dog on a walking trail" onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">';
 
@@ -26,7 +44,7 @@ function clickFunction(index){
 }
 
 function overlayBackground(index){
-    var query = ".overlay." + index;
+    var query = ".overlay";
     document.querySelector(query).style="display: block;position: fixed;top: 0;left: 0;right: 0;background-color: rgba(0, 0, 0, 0.5);backdrop-filter: blur(20px);overflow: hidden;width: 100%;height: 100%;transition: .5s ease-in-out;overscroll-behavior: none;";
     /*style for overlay used above
     display: block;
@@ -54,7 +72,7 @@ function closeFunction(){
 
 function create_preview_image_string(index){
     var preview_image_string = '';
-    var suffix = ' onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0"';
+    var suffix = ' onclick="displayImage(this)" onkeydown="if(event.key === \'Enter\' || event.key === \' \') displayImage(this);" tabindex="0">';
     var image_ar = '';
 
     for (var i = 0; i < pets_image_nest_ar.length; i++){
@@ -68,6 +86,8 @@ function create_preview_image_string(index){
         preview_image_string += image_ar[i] + suffix;
     }
 
+    console.log(preview_image_string);
+
     return preview_image_string;
 }
 
@@ -77,7 +97,7 @@ function create_gallery_string(index){
 }
 
 async function draw_gallery(index){
-    var query = ".overlay." + index;
+    var query = ".overlay";
     var target = document.querySelector(query);
     console.log(target);
     await insert_html_to_gallery(index, target);
@@ -86,7 +106,7 @@ async function draw_gallery(index){
 
 async function insert_html_to_gallery(index, target){
     var pet_gallery = create_gallery_string(index);
-    target.innerHTML = first_pet_gallery;
+    target.innerHTML = pet_gallery;
 }
 
 function disableMainPageInteraction() {
