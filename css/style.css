@@ -78,6 +78,8 @@ h3{
 li{
     line-height: 1.4em;
     margin-bottom: 0.5em;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 p{
@@ -501,6 +503,7 @@ img{
 
     .recipe_primary_text_screen{
         grid-column: 3 / span 2;
+        overflow: auto;
     }
 
     .travel_primary_gallery_screen{

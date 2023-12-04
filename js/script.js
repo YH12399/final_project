@@ -77,7 +77,13 @@ var first_recipe_image_ar = ['first_recipe',
 '<img src="images/recipes/chinese_hot_and_sour_soup/chinese_hot_and_sour_soup_3.jpg" alt="A bowl of Chinese Hot and Sour Soup shot from its top"',
 '<img src="images/recipes/chinese_hot_and_sour_soup/chinese_hot_and_sour_soup_4.jpg" alt="Ingredients for Chinese Hot and Sour Soup"'];
 
-var recipe_image_ar = [first_recipe_image_ar];
+var second_recipe_image_ar = ['second_recipe',
+'<img src="images/recipes/chicken_curry/japanese_chicken_curry.jpg" alt="A plate of Japanese Chicken Curry with white rice"',
+'<img src="images/recipes/chicken_curry/curry_sauce.jpeg" alt="A box of chicken curry suace mix"',
+'<img src="images/recipes/chicken_curry/raw_chicken_breast.jpeg" alt="A plate of raw chicken breast"',
+'<img src="images/recipes/chicken_curry/rice.jpeg" alt="A bowl of white rice"'];
+
+var recipe_image_ar = [first_recipe_image_ar, second_recipe_image_ar];
 
 function clickFunction(){
     console.log('clicked');
