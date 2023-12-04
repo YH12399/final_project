@@ -71,6 +71,14 @@ var sixth_travel_image_ar = ['sixth_travel',
 
 var travel_image_ar = [first_travel_image_ar, second_travel_image_ar, third_travel_image_ar, fourth_travel_image_ar, fifth_travel_image_ar, sixth_travel_image_ar];
 
+var first_recipe_image_ar = ['first_recipe',
+'<img src="images/recipes/chinese_hot_and_sour_soup/chinese_hot_and_sour_soup_1.jpg" alt="A spon in a bowl of Chinese Hot and Sour Soup"',
+'<img src="images/recipes/chinese_hot_and_sour_soup/chinese_hot_and_sour_soup_2.jpg" alt="A small bowl of Chinese Hot and Sour Soup"',
+'<img src="images/recipes/chinese_hot_and_sour_soup/chinese_hot_and_sour_soup_3.jpg" alt="A bowl of Chinese Hot and Sour Soup shot from its top"',
+'<img src="images/recipes/chinese_hot_and_sour_soup/chinese_hot_and_sour_soup_4.jpg" alt="Ingredients for Chinese Hot and Sour Soup"'];
+
+var recipe_image_ar = [first_recipe_image_ar];
+
 function clickFunction(){
     console.log('clicked');
 }
@@ -114,7 +122,7 @@ function get_image_nest_list(index){
     }else if(index.search("travel") != -1){
         return travel_image_ar;
     }else if(index.search("recipe") != -1){
-        return recipes_image_ar;
+        return recipe_image_ar;
     }
 }
 
