@@ -63,7 +63,13 @@ var fifth_travel_image_ar = ['fifth_travel',
 '<img src="images/travel/boston/charles_river.jpg" alt="A night view of Boston\'s skyline on the Charles River"',
 '<img src="images/travel/boston/harvard.jpg" alt="A view of a building Harvard University"'];
 
-var travel_image_ar = [first_travel_image_ar, second_travel_image_ar, third_travel_image_ar, fourth_travel_image_ar, fifth_travel_image_ar];
+var sixth_travel_image_ar = ['sixth_travel',
+'<img src="images/travel/seattle/seattle_main.jpg" alt="A night view of the skyline of Seattle"',
+'<img src="images/travel/seattle/mount_rainer.jpg" alt="A view of Mount Rainier with some forest in front"',
+'<img src="images/travel/seattle/pike_place.jpg" alt="A night view of the sign of the market, with street and people in front"',
+'<img src="images/travel/seattle/space_needle.jpg" alt="A view of the spece needle from its bottom"'];
+
+var travel_image_ar = [first_travel_image_ar, second_travel_image_ar, third_travel_image_ar, fourth_travel_image_ar, fifth_travel_image_ar, sixth_travel_image_ar];
 
 function clickFunction(){
     console.log('clicked');
