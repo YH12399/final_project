@@ -30,15 +30,21 @@ var fifth_pet_image_ar = ['fifth_pet',
 var pets_image_nest_ar = [first_pet_image_ar, second_pet_image_ar, third_pet_image_ar, fourth_pet_image_ar, fifth_pet_image_ar];
 
 var first_travel_image_ar = ['first_travel',
+                                '<img src="images/travel/chiangmai/chiangmai.jpeg" alt="Overlook the temple and mountains at the higest peak in Thailand"',
                                 '<img src="images/travel/chiangmai/chiangmai1.jpeg" alt="Colorful hot balloons in the heart of Chiang Mai"',
                                 '<img src="images/travel/chiangmai/chiangmai2.jpeg" alt="Several elephants and smiley volunteers in the forest"',
                                 '<img src="images/travel/chiangmai/chiangmai3.jpeg" alt="ancient temple of Chiang Mai"',
                                 '<img src="images/travel/chiangmai/chiangmai4.jpeg" alt="several monks walk by the street"',
-                                '<img src="images/travel/chiangmai/chiangmai5.jpeg" alt="several delicious dishes from Chiang Mai"',
-                                '<img src="images/travel/chiangmai/chiangmaigif.gif" class="motion_gif" alt="A full sky of Sky Lantern rising up"',
-                                '<img src="images/travel/chiangmai/chiangmaigif_static.jpeg" class="static_gif" alt="A full sky of Sky Lantern rising up"'];
+                                '<img src="images/travel/chiangmai/chiangmai5.jpeg" alt="several delicious dishes from Chiang Mai"'];
 
-var travel_image_ar = [first_travel_image_ar];
+var second_travel_image_ar = ['second_travel',
+'<img src="images/travel/monteverde/monteverde_cloud_forest.jpeg" alt="Clouds rolling through a line of trees."',
+'<img src="images/travel/monteverde/monteverde_skyline.jpeg" alt="A view of the skyline of a small town during daytime"',
+'<img src="images/travel/monteverde/monteverde_el_tigre_waterfalls.jpeg" alt="A person in red standing in front of one of El Tigre\'s four waterfalls."',
+'<img src="images/travel/monteverde/monteverde_hanging_bridges.jpeg" alt="An image of a bridge hanging above the cloud forest canopy in Monteverde."',
+'<img src="images/travel/monteverde/monteverde_hummingbirds.jpeg" alt="A hummingbird with green feathers drinking from a pink and orange flower."'];
+
+var travel_image_ar = [first_travel_image_ar, second_travel_image_ar];
 
 function clickFunction(){
     console.log('clicked');

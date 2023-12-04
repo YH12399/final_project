@@ -17,6 +17,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 nav{
     /* background-color: #ddd; */
     padding: 2em 0em;
@@ -44,12 +46,12 @@ nav .active{
     background-color: #a9a9a9;
 }
 
-img{
-    margin-top: 5%;
-    margin-right: 5%;
+/* img{
+    margin-top: 2%;
+    margin-right: 2%;
     margin-bottom: 5%;
     margin-left: 5%;
-}
+} */
 
 h1{
     font-size: 3em;
@@ -70,6 +72,7 @@ h3{
     font-weight: bold;
     text-align: left;
     line-height: 1.2em;
+    text-align: center;
 }
 
 p{
@@ -165,7 +168,14 @@ nav .active{
     overflow: hidden;
 }
 
-.travel_primary_text_screen{
+.pet_primary img, .travel_primary img{
+    object-fit: cover;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.screen{
     display: none;
 }
 
@@ -459,11 +469,17 @@ div{
         transform: scale(1.05);
     }
 
+    .pet_primary.last img{
+        width: auto;
+        object-fit: cover;
+        margin-top: 2%;
+    }
+
     .travel_primary{
         grid-column: 1 / span 3;
     }
 
-    .travel_primary_text_phone{
+    .phone{
         display: none;
     }
 
