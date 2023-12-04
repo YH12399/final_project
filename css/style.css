@@ -174,7 +174,8 @@ nav .active{
     grid-column: 1 / -1;
     width: 100%;
     text-align: center;
-    box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.25); 
+    box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -249,7 +250,8 @@ img{
     height: 25vh;
     text-align: center;
     /* background-color: rgba(168, 204, 215, 0.4); */
-    box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.25); 
+    box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -334,6 +336,7 @@ img{
     margin-left: 5%;
     margin-right: 5%;
     background-color: rgba(168, 204, 215, 0.5);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -387,14 +390,6 @@ img{
 
 .close_button:focus{
     border: 1px solid rgba(255, 255, 255, 0.85);
-}
-
-
-@supports not (backdrop-filter: blur(10px)) {
-    .pet_primary {
-        background: rgba(255, 255, 255, 0.8); /* Less transparent background as a fallback */
-        /* ... other alternative styles ... */
-    }
 }
 
 /* Final Project pause here */
@@ -490,7 +485,8 @@ img{
         width: 100%;
         text-align: center;
         background-color: rgba(168, 204, 215, 0.4);
-        box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.25); 
+        box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.25);
+        -webkit-backdrop-filter: blur(20px); 
         backdrop-filter: blur(20px);
         border-radius: 15px;
         border: 1px solid rgba(255, 255, 255, 0.25);
@@ -530,6 +526,7 @@ img{
         text-align: center;
         /* background-color: rgba(168, 204, 215, 0.4); */
         box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.25); 
+        -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         border-radius: 15px;
         border: 1px solid rgba(255, 255, 255, 0.25);
