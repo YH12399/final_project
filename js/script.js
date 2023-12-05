@@ -121,7 +121,7 @@ function closeFunction(){
     document.querySelector(".overlay").removeAttribute("style");
     document.querySelector(".overlay").innerHTML = "";
     document.body.style.overflow = "auto";
-    enableMainPageInteraction()
+    enableMainPageInteraction();
 }
 
 function get_image_nest_list(index){
